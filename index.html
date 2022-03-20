@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="new-todo-input">
-                    <form>
+                    <form onsubmit="addItem(event)">
                         <input name="todo-input-text" id="new-todo-text" type="text" placeholder="Create a new todo..."
                             required>
                     </form>
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="delete-wrapper">
-                            <img src="./assets/images/icons8-delete.svg" alt="delete-img">
+                            <img src="./assets/images/icon-delete.svg" alt="delete-img">
                         </div>
                     </div>
                     <div class="todo-item">
@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="delete-wrapper">
-                            <img src="./assets/images/icons8-delete.svg" alt="delete-img">
+                            <img src="./assets/images/icon-delete.svg" alt="delete-img">
                         </div>
                     </div>
 
@@ -113,7 +113,7 @@
 
                         <div class="delete-wrapper">
 
-                            <img src="./assets/images/icons8-delete.svg" alt="">
+                            <img src="./assets/images/icon-delete.svg" alt="delete-img">
 
                         </div>
                     </div>
@@ -146,6 +146,7 @@
 
     </main>
 
+    <script src="./script/index.js"></script>
 
 </body>
 
