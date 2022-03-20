@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    background-color: hsl(235, 21%, 11%);
+    display: flex;
+    justify-content: center;
+    background-color: hsl(235, 21%, 11%);
+
+}
+
+
+/* css classes */
+
+.banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 360px;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.banner img{
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.wrapper {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 110px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-todo h3 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.theme {
+    cursor: pointer;
+}
+
+
+.todo-input {
+    background-color: hsl(235, 21%, 11%);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    padding:  5px;
+    border-radius: 7px;
+}
+
+.check {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid  hsl(237, 14%, 26%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.check-mark img {
+    visibility: hidden;
+}
+
+
+
+.new-todo-input {
+    width: 100%;
+    padding: 0px 10px;
+   
+}
+
+form {
+    flex-grow: 1;
+    height: 50px;
+    background-color: transparent;
+}
+
+form input {
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: hsl(234, 39%, 85%);
+}
+
+.todo-items-wrapper {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 7px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 30px 0px rgb(0 0 0 / 40%);
+}
+
+.todo-item {
+    background-color: hsl(237, 24%, 19%);
+    color: hsl(234, 39%, 85%);
+    padding: 2px 5px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid  hsl(237, 14%, 26%);
+}
+
+.check-text-wrapper {
+    display: flex;
+    align-items: center;
+  
+}
+
+.todo-text-wrapper{
+    margin-left: auto;
+}
+
+
+.delete-wrapper {
+    width: 50px;
+    margin-right: 5px;
+}
+
+
+.todo-info {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    color: hsl(233, 14%, 35%);
+    background-color: hsl(237, 24%, 19%);
+
+}
+
+.items-statuses span{
+    padding: 0px 5px;
+}
+
+span.active {
+    color: hsl(220, 98%, 61%);
+}
+
+
+/* pseudo classes */
+
+.check-mark:hover {
+    background: linear-gradient(135deg, #55DDFF, #C058F3 100%);
+    cursor: pointer;
+    transition: all 0.25s;
+    
+}
+
+.check-mark:hover img {
+    visibility: visible;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow:  0px 0px 7px 0px hsl(235, 21%, 11%);
+    border-color: hsl(235, 24%, 19%);
+}
+
+.delete-wrapper img:hover{
+    cursor: pointer;
+  
+}
+
+span:hover, .clear-completed:hover {
+    color: hsl(220, 98%, 61%);
+    cursor: pointer;
+}
+
+
+/* pseudo elements */
+
+form input::placeholder{
+    color: hsl(233, 14%, 55%);
+}
+
+
+/* media queries (responsiveness) */
+
+@media screen and (max-width: 812px) {
+    .wrapper {
+        width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .wrapper {
+        width: 500px;
+    }
+
+    .header-todo h3{
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
+
+    .todo-input {
+        height: 55px;
+        display: flex;
+        align-items: center;
+        margin: 18px auto;
+        padding:  4px;
+  
+    }
+    
+    .check {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .check-mark {
+        width: 28px;
+        height: 28px;
+    
+    }
+
+    .todo-item { 
+        height: 67px;
+    }
+
+    .todo-text-wrapper {
+        font-size: 17px;
+    }
+
+    .delete-wrapper {
+        width: 40px;
+      
+    }
+  
+    .todo-info {
+        height: 67px;
+    }
+
+    .todo-info span{
+        font-size: 17px;
+    }
+    
+}
+
+
+@media screen and (max-width: 575px) {
+    .wrapper {
+        width: 450px;
+    }
+
+    .header-todo h3{
+        font-size: 35px;
+        letter-spacing: 7px;
+    }
+
+    .todo-input {
+        height: 53px;
+        
+  
+    }
+    
+    .check {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .check-mark {
+        width: 28px;
+        height: 28px;
+    
+    }
+
+    .todo-item { 
+        height: 53px;
+       
+    }
+
+    .todo-text-wrapper {
+        font-size: 16px;
+    }
+
+    .delete-wrapper {
+        width: 38px;
+      
+    }
+  
+    .todo-info {
+        height: 54px;
+    }
+
+    .todo-info span{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 430px;
+    }
+
+    .header-todo h3{
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
+
+    .todo-input {
+        height: 55px;
+        display: flex;
+        align-items: center;
+        margin: 18px auto;
+        padding:  4px;
+
+    }
+
+    
+
+    .todo-text-wrapper {
+        font-size: 16px;
+    }
+
+
+    .todo-info {
+        height: 67px;
+    }
+
+    .todo-info span{
+        font-size: 15px;
+    }
+    
+}
+
+
+@media screen and (max-width: 465px) {
+    .wrapper {
+        width: 400px;
+    }
+
+    .header-todo h3{
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .check {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .check-mark {
+        width: 23px;
+        height: 23px;
+    
+    }
+
+    .todo-input {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin: 15px auto;
+        padding:  3px;
+
+    }
+
+
+    .todo-text-wrapper {
+        font-size: 15px;
+    }
+
+    .delete-wrapper {
+        width: 40px;
+        margin-right: 5px;
+    }
+    
+
+
+    .todo-info {
+        height: 65px;
+    }
+
+    .todo-info span{
+        font-size: 13px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 435px) {
+    .wrapper {
+        width: 380px;
+    }
+
+    .header-todo h3{
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+
+    form input {
+        font-size: 17px;
+    }
+
+    
+    .todo-input {
+        height: 48px;
+    }
+
+
+    .todo-text-wrapper {
+        font-size: 15px;
+    }
+
+    .todo-info {
+        height: 65px;
+    }
+
+    .todo-info span{
+        font-size: 13.5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 397px) {
+    .wrapper {
+        width: 340px;
+    }
+
+    .todo-input {
+        height: 46px;
+    }
+
+
+
+    .todo-info {
+        height: 80px;
+        display: block;
+        justify-content: start;
+       
+    }
+
+    .items-statuses {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+       
+        
+      
+    }
+
+    .items-statuses span{
+        padding: 10px 0px;
+      
+       
+    }
+
+    .clear-completed {
+        display: flex;
+        justify-content: end;
+    }
+
+    .todo-info span{
+        font-size: 13.5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 352px) {
+    .wrapper {
+        width: 320px;
+    }
+
+    .todo-input {
+        height: 50px;
+
+    }
+
+    
+    .check {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .check-mark {
+        width: 19px;
+        height: 19px;
+    
+    }
+
+    .delete-wrapper {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .todo-info {
+        height: 80px;
+        display: block;
+        justify-content: start;
+       
+    }
+
+  
+    .todo-text-wrapper{
+        margin-left: 10px;
+      
+    }
+
+    .items-statuses {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+       
+        
+      
+    }
+
+    .items-statuses span{
+        padding: 10px 0px;
+      
+       
+    }
+
+    .clear-completed {
+        display: flex;
+        justify-content: end;
+    }
+
+    .todo-info span{
+        font-size: 13.5px;
+    }
+    
+}
+
+
+
+
+

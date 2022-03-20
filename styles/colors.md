@@ -1,0 +1,5 @@
+default color: hsl(235, 21%, 11%)
+border color: hsl(237, 14%, 26%)
+text-color: hsl(234, 39%, 85%)
+placeholder-color: hsl(233, 14%, 55%)
+list item color: hsl(235, 24%, 19%)
