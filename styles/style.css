@@ -171,6 +171,20 @@ span.active {
   color: hsl(220, 98%, 61%);
 }
 
+.todo-text.checked {
+  text-decoration: line-through;
+  color: hsl(233, 14%, 35%);
+}
+
+.check-mark.checked img {
+  visibility: visible;
+}
+.check-mark.checked {
+  background: linear-gradient(135deg, #55ddff, #c058f3 100%);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
 /* pseudo classes */
 
 .check-mark:hover {
@@ -194,7 +208,7 @@ span.active {
 }
 
 span:hover,
-.clear-completed:hover {
+.clear-list:hover {
   color: hsl(220, 98%, 61%);
   cursor: pointer;
 }
@@ -452,7 +466,7 @@ form input::placeholder {
     padding: 10px 0px;
   }
 
-  .clear-completed {
+  .clear-list {
     display: flex;
     justify-content: end;
   }
@@ -506,7 +520,7 @@ form input::placeholder {
     padding: 10px 0px;
   }
 
-  .clear-completed {
+  .clear-list {
     display: flex;
     justify-content: end;
   }
